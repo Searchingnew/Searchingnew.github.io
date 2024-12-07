@@ -3,124 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Searching New</title>
+    <title>Search Random Number</title>
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
             font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
         }
-        h1 {
+
+        .dice-container {
+            text-align: center;
+        }
+
+        .dice {
+            font-size: 100px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
             margin-bottom: 20px;
+            transition: transform 0.2s;
         }
-        input[type="text"] {
-            padding: 10px;
-            width: 300px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        input[type="submit"] {
-            padding: 10px 20px;
-            margin-left: 10px;
-            font-size: 16px;
-            background-color: #4285F4;
+
+        .button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #28a745;
             color: white;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.2s;
         }
-        input[type="submit"]:hover {
-            background-color: #357ae8;
+
+        .button:hover {
+            background-color: #218838;
+        }
+
+        .button:active {
+            background-color: #1e7e34;
         }
     </style>
+       <script>
+        function openRandomSite() {
+            var sites = [
+                "https://luglawhaulsano.net/4/8448843",
+                "https://luglawhaulsano.net/4/8431204",
+                "https://luglawhaulsano.net/4/8619333",
+                "https://luglawhaulsano.net/4/8619334",
+                "https://luglawhaulsano.net/4/8619335",
+                "https://luglawhaulsano.net/4/8619336",
+                "https://luglawhaulsano.net/4/8619337",
+                "https://luglawhaulsano.net/4/8619340",
+                "https://luglawhaulsano.net/4/8619341",
+                "https://luglawhaulsano.net/4/8619343",
+                "https://luglawhaulsano.net/4/8619349"
+            ];
+            var randomSite = sites[Math.floor(Math.random() * sites.length)];
+            window.location.href = randomSite;
+        }
+    </script>
 </head>
 <body>
-    <h1>Google Search</h1>
-    <form id="searchForm" action="https://www.google.com/search" method="get">
-        <input type="text" name="q" placeholder="Search Google..." required>
-        <input type="submit" value="Search">
-    </form>
+<p id="p1"></p>
 
-    <h2 id="status">Loading scripts...</h2>
+<script>
+  // Array of zone IDs
+  const zones = [118292, 118291, 118293, 118294, 118295, 118296, 118297, 118298, 118299, 118290, 118300];
+
+
+  // Select a random zone ID from the array
+  const randomZone = zones[Math.floor(Math.random() * zones.length)];
+
+  // Display the randomly selected zone ID in the <p> tag with ID 'p1'
+  document.getElementById('p1').innerText = `Loaded zone: ${randomZone}`;
+
+  // Create a script element dynamically
+  const script = document.createElement('script');
+  script.src = 'https://alwingulla.com/88/tag.min.js';
+  script.setAttribute('data-zone', randomZone);
+  script.async = true;
+  script.setAttribute('data-cfasync', 'false');
+
+  // Append the script to the body of the document
+  document.body.appendChild(script);
+</script>
+
+    <div class="dice-container">
+        <div id="dice" class="dice">1</div>
+        <button class="button" onclick="rollDice(); openRandomSite();">Roll Dice</button>
+    </div>
 
     <script>
-        // Arrays for the nunsourdaultozy IDs
-        var nunsourdaultozyIds = [
-        8431135,
-        8431130,
-        8431127,
-        8431121,
-        8431116,
-        8431112,
-        8431109,
-        8431104,
-        8431099,
-        8431096
-        ];
-
-
-          var domainURL = [
-              "https://vemtoutcheeg.com",
-              "https://nunsourdaultozy.net"
-        ];
-
-      
-         // Randomly select and load one URL of Push ADv
-        var currentURL = domainURL[Math.floor(Math.random() * domainURL.length)];
-        
-        
-        // Arrays for the thubanoa IDs
-        var thubanoaIds = [
-              8431098,
-              8431103,
-              8431107,
-              8431111,
-              8431114,
-              8431120,
-              8431124,
-              8431129,
-              8431133,
-              8431137
-        ];
-
-        // Function to load nunsourdaultozy scripts
-        function loadNunsourdaultozyScript(id) {
-            var script = document.createElement('script');
-            script.async = true;
-            script.src = `${currentURL}/400/` + id;
-            script.onerror = function() {
-                console.error(`Failed to load nunsourdaultozy script: ${id}`);
-            };
-            (document.body || document.documentElement).appendChild(script);
+        function rollDice() {
+            var randomNumber = Math.floor(Math.random() * 6) + 1;
+            document.getElementById('dice').innerText = randomNumber;
+            document.getElementById('dice').style.transform = 'rotate(360deg)';
+            
+            setTimeout(function() {
+                document.getElementById('dice').style.transform = 'rotate(0deg)';
+            }, 200);
         }
-
-        // Function to load thubanoa scripts
-        function loadThubanoaScript(id) {
-            var script = document.createElement('script');
-            script.async = true;
-            script.setAttribute('data-cfasync', 'false');
-            script.src = '//thubanoa.com/1?z=' + id;
-            script.onerror = function() {
-                console.error(`Failed to load thubanoa script: ${id}`);
-            };
-            (document.body || document.documentElement).appendChild(script);
-        }
-
-        // Randomly select and load one nunsourdaultozy script
-        var randomNunsourdaultozyId = nunsourdaultozyIds[Math.floor(Math.random() * nunsourdaultozyIds.length)];
-        loadNunsourdaultozyScript(randomNunsourdaultozyId);
-
-        // Randomly select and load one thubanoa script
-        var randomThubanoaId = thubanoaIds[Math.floor(Math.random() * thubanoaIds.length)];
-        loadThubanoaScript(randomThubanoaId);
-
-        // Update the h2 element to show the loaded IDs
-        document.getElementById('status').innerText = `Loaded IDs: nunsourdaultozy.net - ${randomNunsourdaultozyId} & ${currentURL}, thubanoa.com - ${randomThubanoaId}`;
     </script>
+
 </body>
 </html>
